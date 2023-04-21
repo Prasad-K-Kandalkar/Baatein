@@ -1,8 +1,17 @@
 import React from 'react'
+import { useEffect } from "react";
+import { useHistory } from "react-router";
 import {Container,Text,Box,Tab,TabList,TabPanel,TabPanels,Tabs} from "@chakra-ui/react"
 import Login from '../components/Authentication/Login'
 import Signup from '../components/Authentication/Signup'
 const HomePage = () => {
+  const history = useHistory();
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("userInfo"));
+
+    if (user) history.push("/chats");
+  }, [history]);
   return (
     <Container maxW = "xl" centerContent>
       <Box
@@ -15,7 +24,7 @@ const HomePage = () => {
       borderRadius="lg"
       borderWidth = "1px"
       >
-        <Text fontSize = "4xl" fontFamily="Work sans" >Talk-A-Tive</Text>
+        <Text fontSize = "4xl" fontFamily="Work sans" >BAATEIN</Text>
       </Box>
       <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
         <Tabs variant='soft-rounded' >
@@ -40,3 +49,6 @@ const HomePage = () => {
 }
 
 export default HomePage
+
+
+
