@@ -1,5 +1,7 @@
 
-# BAATEIN
+<p align="left">
+  <img src="https://github.com/Prasad-K-Kandalkar/Baatein/blob/master/Screenshots/Baatein_img.png" />
+</p>
 
 1. Baatein is a Full Stack Web-based Realtime Chatting App
 2. Websockets used for real-time data transfer, enabling seamless communication.
